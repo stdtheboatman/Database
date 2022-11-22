@@ -65,7 +65,7 @@
 
 - Profile: user profile
   - **UserId** - uuid (foriegn key)
-  - Url - varchar(64) (url for the profile avatar)
+  - AvatarUrl - varchar(64) (url for the profile avatar)
   - Description - varchar(256) (user profile description)
 
 - Stream: stream data
