@@ -36,7 +36,7 @@
 
 
 ## Completed and normalized DB:
-![alt text](https://github.com/stdtheboatman/Database/blob/main/data/database-scheme-norm.drawio.png)
+![alt text](https://github.com/stdtheboatman/Database/blob/main/data/database-scheme-norm.drawio1.png)
 
 
 ## DB description:
