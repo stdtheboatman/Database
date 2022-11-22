@@ -32,11 +32,11 @@
   - add/remove moderators on stream
 
 ## DB scheme:
-![alt text](https://github.com/stdtheboatman/Database/blob/main/data/rawdb)
+![alt text](https://github.com/stdtheboatman/Database/blob/main/data/database-scheme.drawio.png)
 
 
 ## Completed and normalized DB:
-![alt text](https://github.com/stdtheboatman/Database/blob/main/data/db)
+![alt text](https://github.com/stdtheboatman/Database/blob/main/data/database-scheme-norm.drawio.png)
 
 
 ## DB description:
@@ -62,6 +62,11 @@
 - Role: roles
   - **RoleId** - uuid (universal unical identifier)
   - RoleName - varchar(16) (role name)
+
+- Profile: user profile
+  - **UserId** - uuid (foriegn key)
+  - Url - varchar(64) (url for the profile avatar)
+  - Description - varchar(256) (user profile description)
 
 - Stream: stream data
   - **StreamId** - uuid (universal unical identifier)
