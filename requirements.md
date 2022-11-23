@@ -36,7 +36,7 @@
 
 
 ## Completed and normalized DB:
-![alt text](https://github.com/stdtheboatman/Database/blob/main/data/database-scheme-norm.drawio1.png)
+![alt text](https://github.com/stdtheboatman/Database/blob/main/data/database-scheme-norm.drawio2.png)
 
 
 ## DB description:
@@ -56,7 +56,7 @@
   - TimeStamp - timestamp (time stamp of action)
 
 - AuthUser: auth data for user
-  - **UserId** - uuid (foriegn key)
+  - **AuthUserId**(UserId) - uuid (foriegn key to User(UserId))
   - PasswordHash - varchar(64) (hash of user password)
 
 - Role: roles
@@ -64,14 +64,13 @@
   - RoleName - varchar(16) (role name)
 
 - Profile: user profile
-  - **UserId** - uuid (foriegn key)
+  - **ProfileId** - uuid (foriegn key to User(UserId))
   - AvatarUrl - varchar(64) (url for the profile avatar)
   - Description - varchar(256) (user profile description)
 
 - Stream: stream data
   - **StreamId** - uuid (universal unical identifier)
   - UserId - uuid (foriegn key)
-  - ChatId - uuid (foriegn key)
   - Url - varchar(64) (url for stream, where stream hosted)
 
 - StreamViewers: many to many table between streams and users
@@ -79,7 +78,7 @@
   - **UserId** - uuid (foriegn key)
 
 - Chat: stream chat
-  - **ChatId** - uuid (universal unical identifier)
+  - **ChatId**(StreamId) - uuid (foriegn key to Stream(StreamId))
   - StreamId - uuid (foriegn key)
   - IsReadOnly - boolean (is stream read only if true)
 
